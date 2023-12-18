@@ -1,7 +1,7 @@
 # 🛡️ i18n-type-safe
 ---
 
-This is a TypeScript setup that will provides type safety for i18n (internationalization) and i18next in React projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.
+This is a **TypeScript**🔷 setup that will provides type safety for i18n (internationalization) and i18next in **React**⚛️ projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.
 
 ---
 
@@ -65,7 +65,7 @@ export const en: Locale = {
 
 ---
 
-Requred packages 
+📦 Required packages: 
 
 ```
 npm i typescript
