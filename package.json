@@ -1,0 +1,20 @@
+{
+  "name": "i18n-type-safe",
+  "version": "1.0.0",
+  "description": "i18n-type-safe/ │   .gitignore    │   .package.json   │   .tsconfig.json  │   README.md │ │ └─── src/ │     │ │     └─── locales/ │     │     │ │     │     └─── en.ts │     │ │     └─── @types/ │           │ │           └─── i18next.d.ts │           │ │           └─── locals.d.ts │ │ │ └─── dist/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AChristoff/i18n-type-safe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AChristoff/i18n-type-safe/issues"
+  },
+  "homepage": "https://github.com/AChristoff/i18n-type-safe#readme"
+}
