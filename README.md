@@ -1,27 +1,27 @@
 # 🛡️ i18n-type-safe
 ---
 
-A TypeScript library that provides type safety for i18n (internationalization) and i18next in React projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.
+This is a TypeScript setup that will provides type safety for i18n (internationalization) and i18next in React projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.
 
 ---
 
 ## 🌍 ***Translation File Protection***
 
 **Protects Against Wrong/Missing Keys in Translation Files**
-Say goodbye to the frustration of missing or incorrect translation keys. This package ensures that all keys are valid and accounted for.
+Say goodbye to the frustration of missing or incorrect translation keys. This setup ensures that all keys are valid and accounted for.
 
 **Prevents Wrong/Missing {{Placeholders}} in Translation Files**
-Never worry about placeholders causing issues. The package validates that all placeholders are correctly used in your translation strings.
+Never worry about placeholders causing issues. The setup validates that all placeholders are correctly used in your translation strings.
 
 
 
 ## 🚀 ***In-App Protection***
 
 **Protects Against Wrong Keys When Using the `t()` Function in Your App**
-When you use the `t()` function in your app, the package makes sure that you're referencing valid translation keys.
+When you use the `t()` function in your app, the setup makes sure that you're referencing valid translation keys.
 
 **Prevents Wrong {{Placeholders}} When Using the `t()` Function in Your App**
-Likewise, the package ensures that your placeholders are used correctly within the `t()` function.
+Likewise, the setup ensures that your placeholders are used correctly within the `t()` function.
 
 **Autocomplete for Translation Keys and Placeholders**
 Enjoy the convenience of autocomplete when working with translation keys and placeholders in both your translation files and your app.
@@ -60,14 +60,14 @@ export const en: Locale = {
 ```
 ---
 
-🚀 *Don't let translation errors undermine your app's quality! Choose `i18n-type-safe`.*
+🚀 *Don't let translation errors undermine your app's quality! Follow `i18n-type-safe` and bulletproof you translations!*
 
 ---
 
 ```
 i18n-type-safe/
 │   .gitignore   
-│   .package.json  
+│   .setup.json  
 │   .tsconfig.json 
 │   README.md
 │
