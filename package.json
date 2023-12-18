@@ -1,7 +1,7 @@
 {
   "name": "i18n-type-safe",
   "version": "1.0.0",
-  "description": "i18n-type-safe/ │   .gitignore    │   .package.json   │   .tsconfig.json  │   README.md │ │ └─── src/ │     │ │     └─── locales/ │     │     │ │     │     └─── en.ts │     │ │     └─── @types/ │           │ │           └─── i18next.d.ts │           │ │           └─── locals.d.ts │ │ │ └─── dist/",
+  "description": "A TypeScript library that provides type safety for i18n (internationalization) and i18next in React projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/AChristoff/i18n-type-safe.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "i18n",
+    "i18next",
+    "type-safe",
+    "internationalization",
+    "translation",
+    "typescript"
+  ],
+  "author": "Aleksandar Hristov",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/AChristoff/i18n-type-safe/issues"
   },

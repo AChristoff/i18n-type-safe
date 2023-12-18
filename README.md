@@ -28,4 +28,7 @@ i18n-type-safe/
 └─── dist/
 
 ```
-</br>
+
+## License
+
+Licensed under the [GNU license](https://github.com/AChristoff/i18n-type-safe/blob/main/LICENSE)
