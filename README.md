@@ -1,10 +1,11 @@
-# i18n-type-safe
+# 🛡️ i18n-type-safe
+---
 
 A TypeScript library that provides type safety for i18n (internationalization) and i18next in React projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.
 
 ---
 
-## 🛡️ **Translation File Protection**
+## 🌍 ***Translation File Protection***
 
 **Protects Against Wrong/Missing Keys in Translation Files**
 Say goodbye to the frustration of missing or incorrect translation keys. This package ensures that all keys are valid and accounted for.
@@ -12,9 +13,9 @@ Say goodbye to the frustration of missing or incorrect translation keys. This pa
 **Prevents Wrong/Missing {{Placeholders}} in Translation Files**
 Never worry about placeholders causing issues. The package validates that all placeholders are correctly used in your translation strings.
 
----
 
-## 🚀 **In-App Protection**
+
+## 🚀 ***In-App Protection***
 
 **Protects Against Wrong Keys When Using the `t()` Function in Your App**
 When you use the `t()` function in your app, the package makes sure that you're referencing valid translation keys.
@@ -85,7 +86,7 @@ i18n-type-safe/
 
 
 ```
-
-## 📜 **License**
+---
+## 📜 ***License***
 
  Licensed under the [GPL-3.0 license](https://github.com/AChristoff/i18n-type-safe/blob/main/LICENSE).  This library is free and open-source.
