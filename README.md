@@ -82,13 +82,10 @@ i18n-type-safe/
 │           └─── i18next.d.ts
 │           │
 │           └─── locals.d.ts
-│
-│
-│
-└─── dist/
+
 
 ```
 
-## License
+## 📜 **License**
 
-Licensed under the [GNU license](https://github.com/AChristoff/i18n-type-safe/blob/main/LICENSE)
+ Licensed under the [GPL-3.0 license](https://github.com/AChristoff/i18n-type-safe/blob/main/LICENSE).  This library is free and open-source.
