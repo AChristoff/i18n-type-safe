@@ -72,17 +72,15 @@ i18n-type-safe/
 │   README.md
 │
 │
-└─── src/
+└─── locales/
 │     │
-│     └─── locales/
-│     │     │
-│     │     └─── en.ts
-│     │
-│     └─── @types/
-│           │
-│           └─── i18next.d.ts
-│           │
-│           └─── locals.d.ts
+│     └─── en.ts
+│
+└─── @types/
+      │
+      └─── i18next.d.ts
+      │
+      └─── locals.d.ts
 
 
 ```
