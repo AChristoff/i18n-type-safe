@@ -1,15 +1,15 @@
-import * as fs from 'fs';
-import * as path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 // Function to create directory if it doesn't exist
-function ensureDirSync(dirpath: string): void {
+function ensureDirSync(dirpath) {
     if (!fs.existsSync(dirpath)) {
         fs.mkdirSync(dirpath, { recursive: true });
     }
 }
 
 // Function to copy a file
-function copyFileSync(source: string, target: string): void {
+function copyFileSync(source, target) {
     let targetFile = target;
 
     // If target is a directory, a new file with the same name will be created
