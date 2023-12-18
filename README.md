@@ -5,6 +5,7 @@ This is a TypeScript setup that will provides type safety for i18n (internationa
 
 ---
 
+
 ## 🌍 ***Translation File Protection***
 
 **Protects Against Wrong/Missing Keys in Translation Files**
@@ -63,6 +64,14 @@ export const en: Locale = {
 🚀 *Don't let translation errors undermine your app's quality! Follow `i18n-type-safe` way of doing localization type-safety and bulletproof you translations!*
 
 ---
+
+Requred packages 
+
+```
+npm i typescript
+npm i i18next
+npm i react-i18next
+```
 
 ```
 i18n-type-safe/
