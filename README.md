@@ -68,6 +68,9 @@ export const en: Locale = {
 i18n-type-safe/
   │
   │
+  └─── i18n.tsx
+  │
+  │
   └─── locales/
   │     │
   │     └─── en.ts
