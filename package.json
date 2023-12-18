@@ -1,11 +1,11 @@
 {
   "name": "i18n-type-safe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A TypeScript library that provides type safety for i18n (internationalization) and i18next in React projects. Ensure that your translations and placeholders are type-checked, allowing you to catch translation-related bugs at compile-time.",
   "author": "Aleksandar Hristov",
   "license": "GPL-3.0",
   "scripts": {
-    "postinstall": "node script.ts"
+    "postinstall": "node script.js"
   },
   "dependencies": {
     "i18next": "^23.7.11",
