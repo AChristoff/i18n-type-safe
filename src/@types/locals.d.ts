@@ -12,7 +12,8 @@
  */
 
 export interface ILocale {
-  welcome: string
+  welcome: '{{username}}'
+  password: string
 }
 
 

@@ -23,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/AChristoff/i18n-type-safe/issues"
   },
-  "homepage": "https://github.com/AChristoff/i18n-type-safe#readme"
+  "homepage": "https://github.com/AChristoff/i18n-type-safe#readme",
+  "dependencies": {
+    "i18next": "^23.7.11",
+    "react-i18next": "^13.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
 }
