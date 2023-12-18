@@ -60,7 +60,7 @@ export const en: Locale = {
 ```
 ---
 
-🚀 *Don't let translation errors undermine your app's quality! Follow `i18n-type-safe` and bulletproof you translations!*
+🚀 *Don't let translation errors undermine your app's quality! Follow `i18n-type-safe` way of doing localization type-safety and bulletproof you translations!*
 
 ---
 
