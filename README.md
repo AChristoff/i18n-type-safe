@@ -66,21 +66,17 @@ export const en: Locale = {
 
 ```
 i18n-type-safe/
-│   .gitignore   
-│   .setup.json  
-│   .tsconfig.json 
-│   README.md
-│
-│
-└─── locales/
-│     │
-│     └─── en.ts
-│
-└─── @types/
-      │
-      └─── i18next.d.ts
-      │
-      └─── locals.d.ts
+  │
+  │
+  └─── locales/
+  │     │
+  │     └─── en.ts
+  │
+  └─── @types/
+        │
+        └─── i18next.d.ts
+        │
+        └─── locals.d.ts
 
 
 ```
