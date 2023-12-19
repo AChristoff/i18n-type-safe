@@ -1,23 +1,23 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import i18n, { InitOptions } from 'i18next'
 import { en } from './locales/en'
+import { initReactI18next } from 'react-i18next'
 
-const resources = {
-  en: {
-    translation: en,
-  },
-  // Add more languages here
-}
+export function initI18n(options: InitOptions = {}) {
+  const defaultResources = {
+    en: { translation: en },
+  }
 
-i18n
-  .use(initReactI18next)
-  .init({
-    compatibilityJSON: 'v3', // polyfill
-    lng: 'en', // default language
-    resources, // language files
+  i18n.use(initReactI18next).init({
+    compatibilityJSON: 'v3',
+    lng: 'en',
+    resources: defaultResources,
     interpolation: {
-      escapeValue: false, 
+      escapeValue: false,
     },
+    ...options, // Use user-provided options
   })
+
+  return i18n
+}
 
 export default i18n

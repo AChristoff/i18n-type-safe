@@ -46,4 +46,4 @@ type WithPlaceholders<T> = {
 }
 
 // Add type checking for placeholders in "t" function t('welcome', { username: 'John' })
-export type Locale = WithPlaceholders<ILocale>
+export type Locale<T extends ILocale = ILocale> = WithPlaceholders<T>;

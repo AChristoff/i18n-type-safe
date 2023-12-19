@@ -47,7 +47,7 @@ import { Locale } from '@/@types/locals'
 
 export const en: Locale = {
   welcome: 'Welcome, {{username}}!', ✅ Correct!
-  //wellcome: 'Welcome, {{usename}}!', ❌ wrong key or plaseholder are detected
+  //wellcome: 'Welcome, {{usename}}!', ❌ wrong key or placeholder are detected
 }
 
 /** 
@@ -92,6 +92,79 @@ i18n-type-safe/
 
 
 ```
+
+```ts
+
+// 1.Dine all types for your translations here
+// @types/local.types.ts
+import { Locale } from 'i18n-type-safe'
+
+export interface MyInterface {
+   welcome: '{{username}}'
+   password: string
+   ...
+}
+
+// 2. User i18n-type-sage Generic to type safe the placeholders inside the translations as well 
+export type TypeSafeLocal = Locale<MyInterface>;
+
+
+// 3. User the new type TypeSafeLocal for you translations 
+// locales/en.ts
+import {TypeSafeLocal} from './@types/local.types.ts'
+
+export const en: TypeSafeLocal = {
+  welcome: 'Welcome, {{username}}!', ✅ Correct!
+  //wellcome: 'Welcome, {{usename}}!', ❌ wrong key or placeholder are detected
+}
+
+
+
+// -------------------------------------------
+
+// Initialize i18n-type-safe
+// 1. Create i18n.tsx
+import { initI18n } from 'i18n-type-safe';
+
+import {en} from '@/locales/en' // english
+import {es} from '@/locales/es' // spanish
+
+const resources = {
+  en: {
+    translation: en,
+  },
+  es: {
+    translation: es,
+  },
+}
+
+initI18n({
+  resources,
+  lng: 'en'  // (default lang)
+  // Other settings 
+});
+
+// You can additionally create a dynamic type for all your lang keys to be used in your project
+// export type Lang = keyof typeof resources 
+
+
+// 2. Create @types/i18next.d.ts
+import { MyInterface } from "./locals";
+
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    defaultNS: 'en', // default lang
+    resources: {
+      en: MyInterface,
+      de: MyInterface,
+      // other langs
+    }
+  }
+}
+
+
+```
+
 ---
 ## 📜 ***License***
 
