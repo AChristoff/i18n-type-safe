@@ -67,13 +67,17 @@ ___
 
 ### Step 1: Install 
 Before starting with the setup, install the required the packages. Run the following command in your project's  📂 - `root/` directory:
- ```bash
+```bash
 npm i i18n-type-safe
+
+# Also add  if not included in your project 
+npm i i18next
+npm i react-i18next
 ```
 
 
 ### Step 2: Define Translation Types
-- *Create `📂/@types/local.types.ts`*
+- *Create `📂/@types/locals.d.ts`*
 
 1.1 Define all types for your translations. 
 1.2 Utilize i18n-type-safe Generic to ensure type safety for placeholders in the translations.
@@ -117,7 +121,7 @@ declare module 'i18next' {
 Implement the new TypeSafeLocal type in your translation files.
 
 ```ts
-import { TypeSafeLocal } from "../@types/local.types";
+import { TypeSafeLocal } from "../@types/locals";
 
 export const en: TypeSafeLocal = {
   welcome: 'Welcome, {{username}}!', // ✅ Correct!
@@ -132,9 +136,10 @@ export const en: TypeSafeLocal = {
 - *Create `📂/i18n.tsx`*
 
 ```ts
-import { initI18n } from 'i18n-type-safe'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-import { en } from './locales/en'
+import {en} from './locales/en'
 // import {de} from './locales/de' // German
 
 const resources = {
@@ -146,11 +151,18 @@ const resources = {
   // }
 }
 
-initI18n({
-  resources,
+i18n
+.use(initReactI18next)
+.init({
+  compatibilityJSON: 'v3',
   lng: 'en', // (default lang)
-  // Other custom settings
+  resources,
+  interpolation: {
+    escapeValue: false,
+  },
 })
+
+export default i18n
 
 ```
 -  Optionally, create a dynamic type for all your language keys, to be used in your project
@@ -158,6 +170,8 @@ initI18n({
 ```ts
 export type Lang = keyof typeof resource
 ```
+### Step 6: Provide instance
+ `import '../i18n'` in your project root file `index.tsx` or `App.tsx`
 
  ___
 
