@@ -93,7 +93,7 @@ export interface MyInterface {
 export type TypeSafeLocal = Locale<MyInterface>;
 ```
 ### Step 3: Extend the i18next module with custom type options
-- *Create  `📂@types/i18next.d.ts`*
+- *Create  `📂/@types/i18next.d.ts`*
 
 
 ```ts
