@@ -1,4 +1,5 @@
-# 🛡️ i18n-type-safe
+# 🛡️ [i18n-type-safe](https://www.npmjs.com/package/i18n-type-safe)
+
 ---
 
 - This is a **TypeScript**🔷 setup that will provides type safety for i18n (internationalization) and i18next in **React**⚛️ projects. 
