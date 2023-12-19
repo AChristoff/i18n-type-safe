@@ -117,11 +117,13 @@ declare module 'i18next' {
 Implement the new TypeSafeLocal type in your translation files.
 
 ```ts
-import {TypeSafeLocal} from './@types/local.types.ts'
+import { TypeSafeLocal } from "../@types/local.types";
 
 export const en: TypeSafeLocal = {
-  welcome: 'Welcome, {{username}}!', ✅ Correct!
-  //wellcome: 'Welcome, {{usename}}!', ❌ wrong key or placeholder are detected
+  welcome: 'Welcome, {{username}}!', // ✅ Correct!
+  //wellcome: 'Welcome, {{usename}}!', ❌ Wrong key OR/AND placeholder detected!
+  password: 'Password', // ✅ Correct!
+  //pasword: 'Password', // ❌ Wrong OR missing key detected!
 }
 
 ```
@@ -130,28 +132,29 @@ export const en: TypeSafeLocal = {
 - *Create `📂/i18n.tsx`*
 
 ```ts
-import { initI18n } from 'i18n-type-safe';
+import { initI18n } from 'i18n-type-safe'
 
-import {en} from '@/locales/en' // English
-// import {de} from '@/locales/de' // German
+import { en } from './locales/en'
+// import {de} from './locales/de' // German
 
 const resources = {
   en: {
     translation: en,
   },
-// de: {
-//   translation: de,
-// }
-
+  // de: {
+  //   translation: de,
+  // }
 }
 
 initI18n({
   resources,
-  lng: 'en'  // (default lang)
-  // Other custom settings 
-});
+  lng: 'en', // (default lang)
+  // Other custom settings
+})
+
 ```
 -  Optionally, create a dynamic type for all your language keys, to be used in your project
+
 ```ts
 export type Lang = keyof typeof resource
 ```
