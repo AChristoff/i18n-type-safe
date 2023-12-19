@@ -34,37 +34,31 @@ ___
  
 ### 🔍 Examples
 
+* *Translation File Protection*
 ```ts
-// locals.d.ts
-export interface ILocale {
-  welcome: '{{username}}'
-}
 
-/** 
- * --------------------------------------------------
- * TRANSLATION FILES PROTECTION
- * locales/en.ts
- * --------------------------------------------------
- */
+// locales/en.ts
 import { Locale } from '@/@types/locals'
 
 export const en: Locale = {
   welcome: 'Welcome, {{username}}!', ✅ Correct!
   //wellcome: 'Welcome, {{usename}}!', ❌ wrong key or placeholder are detected
 }
+```
+* *In-App Protection*
 
-/** 
- * --------------------------------------------------
- * IN-APP PROTECTION
- * app/index.tsx
- * --------------------------------------------------
- */
+```ts
+
+// app/index.tsx
  <p>{t('welcome', { username: 'John' })}</p> ✅ Correct!
 // <p>{t('wellcome', { usename: 'John' })}</p> ❌ Wrong key or placeholder are detected
 ```
+</br>
+
 ___
 
-## 🛠️ Usage
+
+## 🛠️ Getting Started
 
 ### Step 1: Install 
 Before starting with the setup, install the required the packages. Run the following command in your project's  📂 - `root/` directory:
