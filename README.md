@@ -69,7 +69,8 @@ ___
 Before starting with the setup, install the required the packages. Run the following command in your project's  📂 - `root/` directory:
 ```bash
 npm i i18n-type-safe
-# ________________________________________
+```
+```bash
 # Also add if not included in your project 
 npm i i18next
 npm i react-i18next

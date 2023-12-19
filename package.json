@@ -8,7 +8,7 @@
   "devDependencies": {
     "typescript": "^5.1.3"
   },
-  "homepage": "https://github.com/AChristoff/i18n-type-safe#readme",
+  "homepage": "https://www.npmjs.com/package/i18n-type-safe",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AChristoff/i18n-type-safe.git"
