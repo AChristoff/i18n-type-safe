@@ -6,6 +6,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "script.js", "index.js"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }
