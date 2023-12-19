@@ -69,8 +69,8 @@ ___
 Before starting with the setup, install the required the packages. Run the following command in your project's  📂 - `root/` directory:
 ```bash
 npm i i18n-type-safe
-
-# Also add  if not included in your project 
+# ________________________________________
+# Also add if not included in your project 
 npm i i18next
 npm i react-i18next
 ```
@@ -132,7 +132,7 @@ export const en: TypeSafeLocal = {
 
 ```
 
-### Step 5: Initialize and configure i18n-type-safe
+### Step 5: Initialize and configure
 - *Create `📂/i18n.tsx`*
 
 ```ts
@@ -172,6 +172,17 @@ export type Lang = keyof typeof resource
 ```
 ### Step 6: Provide instance
  `import '../i18n'` in your project root file `index.tsx` or `App.tsx`
+
+
+ ### Step 7: Use in-app
+ ```ts
+ import { useTranslation } from 'react-i18next'
+
+ const { t } = useTranslation();
+
+<h1>{t('welcome', {username: 'Alex'})}</h1>
+
+ ```
 
  ___
 
