@@ -1,4 +1,4 @@
-import { Locale } from '../@types/locals'
+import { Locale } from '../types/locals'
 
 export const en: Locale = {
   welcome: 'Welcome, {{username}}!',
