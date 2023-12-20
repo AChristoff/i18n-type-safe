@@ -50,6 +50,10 @@ export const en: Locale = {
 ```ts
 
 // app/index.tsx
+ import { useTranslation } from 'react-i18next'
+ //... component code
+ const { t } = useTranslation();
+ //... render
  <p>{t('welcome', { username: 'John' })}</p> ✅ Correct!
 // <p>{t('wellcome', { usename: 'John' })}</p> ❌ Wrong key or placeholder are detected
 ```
@@ -61,14 +65,14 @@ ___
 ## 🛠️ Getting Started
 
 ### Step 1: Install 
-Before starting with the setup, install the required the packages. Run the following command in your project's  📂 - `root/` directory:
+Before starting with the setup, install the required the packages. 
+Run the following command in your project's  📂 - `root/` directory:
 ```bash
 npm i i18n-type-safe
 ```
+Also add if not included in your project 
 ```bash
-# Also add if not included in your project 
-npm i i18next
-npm i react-i18next
+npm i i18next react-i18next
 ```
 
 
@@ -110,7 +114,7 @@ declare module 'i18next' {
 
 ```
 
-### Step 4: Use TypeSafeLocal for Translations
+### Step 4: Create Translations
 - *Create `📂/locales/en.ts`*
 
 Implement the new TypeSafeLocal type in your translation files.
@@ -127,7 +131,7 @@ export const en: TypeSafeLocal = {
 
 ```
 
-### Step 5: Initialize and configure
+### Step 5: Initialize and configure In-App usage
 - *Create `📂/i18n.tsx`*
 
 ```ts
@@ -166,28 +170,26 @@ export default i18n
 export type Lang = keyof typeof resource
 ```
 ### Step 6: Provide instance
- `import '../i18n'` in your project root file `index.tsx` or `App.tsx`
-
-
- ### Step 7: Use in-app
+ * In your project root file `index.tsx` or `App.tsx`
  ```ts
- import { useTranslation } from 'react-i18next'
-
- const { t } = useTranslation();
-
- <p>{t('welcome', { username: 'John' })}</p> ✅ Correct!
-// <p>{t('wellcome', { usename: 'John' })}</p> ❌ Wrong key or placeholder are detected
-
+ import '../i18n'
+```
+### Step 7: Setup TS File Scope 
+* Adjust the `tsconfig.json` file to ensure TypeScript includes the correct files for your `i18n-type-safe` implementation
+ ```ts
+ "include": ["**/*.ts", "**/*.tsx"],
  ```
 
-### 🎉 Congratulations, you are all set! 
+ ___
+
+### 🎉 Congratulations, that's it — you are all set! 🎉
 Enjoy a wonderful Developer Experience with 'i18n-type-safe', featuring autocomplete and error detection!                                                          
  ___
 
-## 📜 ***License***
+### 📜 ***License***
 
- Licensed under the [GPL-3.0 license](https://github.com/AChristoff/i18n-type-safe/blob/main/LICENSE).  This library is free and open-source.
+ Licensed under the [GPL-3.0 license](https://github.com/AChristoff/i18n-type-safe/blob/main/LICENSE).  This library is **free** and **open-source**!
  
- ___
+
 
 
