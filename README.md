@@ -2,7 +2,7 @@
 
 ---
 
-- This is a **TypeScript**🔷 setup that will provides type safety for i18n (internationalization) and i18next in **React**⚛️ projects. 
+- This is a **TypeScript**🔷 setup that will provides type safety for i18n (internationalization) in **React**⚛️ projects utilizing **Vite**, **Expo** or **Next.js**.
 - Ensure that your **translations** and **placeholders** are **type-safe**, allowing you to catch translation-related bugs at compile-time.
 - **Bulletproof** you translations with `i18n-type-safe`! Don't let translation errors undermine your app's quality!
 
@@ -176,10 +176,13 @@ export type Lang = keyof typeof resource
 
  const { t } = useTranslation();
 
-<h1>{t('welcome', {username: 'Alex'})}</h1>
+ <p>{t('welcome', { username: 'John' })}</p> ✅ Correct!
+// <p>{t('wellcome', { usename: 'John' })}</p> ❌ Wrong key or placeholder are detected
 
  ```
 
+### 🎉 Congratulations, you are all set! 
+Enjoy a wonderful Developer Experience with 'i18n-type-safe', featuring autocomplete and error detection!                                                          
  ___
 
 ## 📜 ***License***
