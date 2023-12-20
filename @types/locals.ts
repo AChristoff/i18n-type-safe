@@ -10,10 +10,10 @@
  * ------------------------------------------------------------------
  */
 
-export interface ILocale {
-  welcome: '{{username}}'
-  password: string
-}
+// export interface ILocale {
+//   welcome: '{{username}}'
+//   password: string
+// }
 
 
 /**
@@ -45,4 +45,4 @@ type WithPlaceholders<T> = {
 }
 
 // Add type checking for placeholders in "t" function t('welcome', { username: 'John' })
-export type Locale<T extends ILocale = ILocale> = WithPlaceholders<T>;
+export type Locale<T> = WithPlaceholders<T>;
