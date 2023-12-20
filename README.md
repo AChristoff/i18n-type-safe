@@ -73,31 +73,30 @@ npm i react-i18next
 
 
 ### Step 2: Define Translation Types
-- *Create `📂/@types/locals.d.ts`*
+- *Create `📂/@types/locals.ts`*
 
 1.1 Define all types for your translations. 
 1.2 Utilize i18n-type-safe Generic to ensure type safety for placeholders in the translations.
 
 ```ts
-// @types/local.types.ts
-import { Locale } from 'i18n-type-safe';
+import { Locale } from 'i18n-type-safe'
 
 // 1.1
 export interface MyInterface {
-  welcome: '{{username}}';
-  password: string;
+  welcome: '{{username}}'
+  password: string
   // ... add other translation keys as needed
 }
 
 // 1.2
-export type TypeSafeLocal = Locale<MyInterface>;
+export type TypeSafeLocal = Locale<MyInterface>
 ```
 ### Step 3: Extend the i18next module with custom type options
 - *Create  `📂/@types/i18next.d.ts`*
 
 
 ```ts
-import { MyInterface } from "./locals";
+import { MyInterface } from './locals'
 
 declare module 'i18next' {
   interface CustomTypeOptions {
@@ -117,7 +116,7 @@ declare module 'i18next' {
 Implement the new TypeSafeLocal type in your translation files.
 
 ```ts
-import { TypeSafeLocal } from "../@types/locals";
+import { TypeSafeLocal } from '../@types/locals'
 
 export const en: TypeSafeLocal = {
   welcome: 'Welcome, {{username}}!', // ✅ Correct!

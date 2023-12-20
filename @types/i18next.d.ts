@@ -1,10 +1,10 @@
-import { ILocale } from "./locals";
+import { ILocale } from './locals'
 
 declare module 'i18next' {
   interface CustomTypeOptions {
-    defaultNS: 'en',
+    defaultNS: 'en'
     resources: {
-      en: ILocale,
+      en: ILocale
     }
   }
 }
