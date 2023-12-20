@@ -2,7 +2,7 @@
 
 ---
 
-- This is a **TypeScript**🔷 setup that will provides type safety for i18n (internationalization) in **React**⚛️ projects utilizing **Vite**, **Expo** or **Next.js**.
+- This is a **TypeScript**🔷 setup that will provides type safety for i18n (internationalization) in **React**⚛️ projects utilizing **Vite** оr **Expo**.
 - Ensure that your **translations** and **placeholders** are **type-safe**, allowing you to catch translation-related bugs at compile-time.
 - **Bulletproof** you translations with `i18n-type-safe`! Don't let translation errors undermine your app's quality!
 
